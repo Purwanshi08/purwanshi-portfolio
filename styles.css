@@ -202,6 +202,23 @@ nav {
     font-weight: 600;
 }
 
+.hero-role { display: flex; align-items: baseline; flex-wrap: wrap; gap: 12px; }
+
+.role-cycle {
+    display: inline-block;
+    color: var(--primary);
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.role-cycle.fade {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
 .hero p {
     font-size: 1.2rem;
     color: var(--text-light);
