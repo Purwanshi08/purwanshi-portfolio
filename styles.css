@@ -1,19 +1,19 @@
 :root {
-    /* Premium Light Theme Colors */
-    --bg-color: #f8fafc;
-    --surface: #ffffff;
-    --alt-bg: #f1f5f9;
+    /* Premium Pastel Theme Colors */
+    --bg-color: #f2effc;
+    --surface: #fffdff;
+    --alt-bg: #eef4fc;
     --primary: #4f46e5;      /* Indigo */
     --secondary: #9333ea;    /* Purple */
     --accent: #0ea5e9;       /* Sky */
     --text-main: #0f172a;
     --text-light: #475569;
-    --border: #e2e8f0;
+    --border: #e4defa;
     --glass-bg: rgba(255, 255, 255, 0.85);
     --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    --shadow-sm: 0 4px 6px -1px rgba(0,0,0,0.05);
-    --shadow-md: 0 10px 30px -10px rgba(0,0,0,0.08);
-    --shadow-lg: 0 20px 40px -15px rgba(0, 0, 0, 0.1);
+    --shadow-sm: 0 4px 6px -1px rgba(79, 70, 229, 0.06);
+    --shadow-md: 0 10px 30px -10px rgba(79, 70, 229, 0.12);
+    --shadow-lg: 0 20px 40px -15px rgba(147, 51, 234, 0.15);
 }
 
 * {
@@ -32,6 +32,16 @@
 body {
     font-family: 'Space Grotesk', sans-serif;
     background-color: var(--bg-color);
+    background-image: linear-gradient(
+        160deg,
+        #eef2ff 0%,
+        #f3ecff 22%,
+        #fdf1fb 45%,
+        #fff0f5 60%,
+        #eef9ff 80%,
+        #eaf6ff 100%
+    );
+    background-attachment: fixed;
     color: var(--text-main);
     line-height: 1.7;
     overflow-x: hidden;
@@ -59,7 +69,7 @@ section {
 }
 
 .alt-bg {
-    background-color: var(--alt-bg);
+    background-image: linear-gradient(135deg, #eef2ff 0%, #f5eefc 50%, #eef7fc 100%);
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
 }
@@ -167,8 +177,9 @@ nav {
     display: flex;
     align-items: center;
     padding-top: 80px;
-    background: radial-gradient(circle at top right, rgba(79, 70, 229, 0.08) 0%, transparent 40%),
-                radial-gradient(circle at bottom left, rgba(147, 51, 234, 0.08) 0%, transparent 40%);
+    background: radial-gradient(circle at top right, rgba(79, 70, 229, 0.14) 0%, transparent 45%),
+                radial-gradient(circle at bottom left, rgba(147, 51, 234, 0.14) 0%, transparent 45%),
+                radial-gradient(circle at 50% 30%, rgba(14, 165, 233, 0.08) 0%, transparent 55%);
 }
 
 .hero-content {
