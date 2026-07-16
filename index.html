@@ -36,7 +36,7 @@
                 <span class="hero-greeting">👋 Hi there, my name is</span>
                 <h1 class="gradient-text">Purwanshi Bajaj</h1>
                 <h2 class="hero-role">I'm a <span class="role-cycle" id="roleText">Web Developer</span></h2>
-                <p>Based at IIITM Gwalior, I build backend systems, publish research on the side, and chase algorithmic puzzles for fun.</p>
+                <p>Studying at IIITM Gwalior, I build backend systems, publish research on the side, and chase algorithmic puzzles for fun.</p>
                 
                 <div class="btn-group">
                     <a href="#contact" class="btn btn-primary">Get In Touch <i class="fas fa-arrow-right" style="margin-left: 8px;"></i></a>
@@ -44,7 +44,7 @@
                 </div>
 
                 <div class="social-icons">
-                    <a href="https://linkedin.com/in/purwanshi-bajaj" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://linkedin.com/in/purwanshibajaj" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
                     <a href="https://github.com/Purwanshi08" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
                     <a href="https://leetcode.com/u/purvi08/" target="_blank" aria-label="LeetCode"><i class="fas fa-code"></i></a>
                     <a href="mailto:purwanshi.bajaj300@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
@@ -316,6 +316,25 @@
             <p>Designed with <i class="fas fa-heart"></i> by Purwanshi Bajaj</p>
         </div>
     </footer>
+
+    
+    <script>
+        (function () {
+            var roles = ['Web Developer', 'Student Researcher', 'Competitive Programmer'];
+            var i = 0;
+            var el = document.getElementById('roleText');
+            if (!el) return;
+
+            setInterval(function () {
+                el.classList.add('fade');
+                setTimeout(function () {
+                    i = (i + 1) % roles.length;
+                    el.textContent = roles[i];
+                    el.classList.remove('fade');
+                }, 150);
+            }, 750);
+        })();
+    </script>
 
     <script>
         (function () {
