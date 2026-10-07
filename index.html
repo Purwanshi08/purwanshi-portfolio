@@ -137,7 +137,9 @@
                                 <span class="timeline-date">Feb 2025 &mdash; July 2025</span>
                             </div>
                             <ul class="timeline-bullets">
-                                <li></li>
+                                <li>Implemented binary pneumonia classification using ImageNet-pretrained InceptionV3 with selective layer freezing and a custom regularization head (BatchNorm + L2 + Dropout), preventing catastrophic forgetting while adapting features to chest X-ray data.</li>
+                                <li>Subclassed Flower's FedAvg strategy to inject per-round centralized evaluation on a shared test set, converting Flower tensors ↔ Keras weights in-memory and tracking accuracy, loss, and macro F1 after every aggregation round, achieving 83.4% global accuracy with test accuracy climbing from ~79% to ~83%.</li>
+                                <li>Containerized all FL participants (server + 3 clients) as slim Docker images and orchestrated them on K3s with node-affinity pinning, ClusterIP service discovery, and resource limits; exposed the aggregated model via a FastAPI inference API with confidence scoring and error handling.</li>
                                 <!-- <li>Designed and deployed an end-to-end distributed privacy-preserving networked system on real Android hardware using OOP principles in Python, achieving 91.26% accuracy at scale.</li>
                                 <li>Engineered FedAvg aggregation over 20 global rounds via Flower + TensorFlow Lite on AWS EC2, implementing gRPC bidirectional streaming to reduce overhead by 40%.</li>
                                 <li>Profiled, debugged, and resolved on-device bottlenecks achieving &lt;3.5 min/round, &lt;320 MB RAM, and 32 mAh/round.</li>
